@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-connectDB(process.env.MONGODB_URL);
+connectDB(process.env.MONGODBURL);
 app.use("/", userRouter);
 
 app.listen(process.env.PORT, () => {
